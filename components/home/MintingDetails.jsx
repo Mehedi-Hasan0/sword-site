@@ -81,6 +81,20 @@ export default function MintingDetails() {
 
   return (
     <section className="text-white overflow-hidden bg-[url('/assets/images/weapon/sword-banner.webp')] bg-cover bg-no-repeat mt-5 sm:mt-12 md:mt-14 lg:mt-20 relative sm:pt-5">
+      {/* glow */}
+      <div className="absolute top-[30%] left-0 z-[5]">
+        <Image
+          src={"/assets/icons/layer-3.svg"}
+          alt=""
+          width={191}
+          height={197}
+        />
+      </div>
+      {/* left side lines */}
+      <div className="bg-[url('/assets/icons/leftLines.svg')] bg-cover absolute top-0 left-0 w-1/2 h-full z-[2] opacity-50" />
+      {/* right side lines */}
+      <div className="bg-[url('/assets/icons/rightLines.svg')] bg-cover absolute top-0 right-0 w-1/2 h-full z-[2] opacity-30" />
+
       {/* main content */}
       <div ref={mainContentRef} className="main-container relative z-10 ">
         {/* btn */}
@@ -220,7 +234,7 @@ export default function MintingDetails() {
                   </div>
 
                   <div className="flex flex-row items-center justify-between gap-5">
-                    <h4 className="text-sm md:text-base lg:text-lg xl:text-xl font-bold text-lime">
+                    <h4 className="text-sm md:text-base lg:text-lg xl:text-xl font-bold text-lime uppercase">
                       0.04 Ethereum{" "}
                       <span className="font-normal text-sm md:text-base lg:text-lg 2xl:text-xl text-white">
                         (0.04 ETH)

@@ -30,22 +30,22 @@ const BannerButton = () => {
     <>
       <WhitelistButton isFullWidth={false} />
 
-      <div className="flex flex-row items-center mt-5 md:mt-8 2xl:mt-16 gap-6">
+      <div className="flex flex-row items-center mt-8 md:mt-10 lg:mt-16 xl:mt-20 2xl:mt-32 gap-6">
         {/* katana logo */}
         {logoData.map((data, i) => (
           <div
             key={i}
             className="flex flex-col items-center justify-center gap-4"
           >
-            <Image
+            {/* <Image
               src={data.icon}
               alt="katan Inu logo"
               width={62}
               height={62}
               className="aspect-square object-contain"
-            />
+            /> */}
             {/* /////////////////// BTN //////////////////// */}
-            <div className="relative p-1 min-h-[42px] min-w-[155px] flex justify-center items-center">
+            <div className="relative p-1 min-h-[42px] min-w-[155px] sm:min-w-[175px] flex justify-center items-center">
               {/* left lines/border */}
               <div className=" absolute left-0 top-0 h-full min-h-[42px] w-full flex flex-col">
                 <div className="w-[1px] h-full bg-[#f1f1f1]" />
@@ -138,6 +138,6 @@ const logoData = [
   },
   {
     icon: "/assets/icons/okx-logo.svg",
-    textLabel: "okx chain",
+    textLabel: "telos sword",
   },
 ];

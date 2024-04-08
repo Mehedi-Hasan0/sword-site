@@ -108,7 +108,7 @@ export default function WhitelistButton({ isFullWidth = false }) {
                   "--gradClr": "#1a1a1a",
                   "--hoverClr": "#000000",
                 }}
-                className={`w-full h-5 uppercase font-extrabold rounded-none bg-green text-sm lg:text-base 2xl:text-xl text-black hover:text-white`}
+                className={`w-full h-5 uppercase font-extrabold rounded-none bg-lime text-sm lg:text-base 2xl:text-xl text-black hover:text-white`}
               >
                 whitelist now
               </Button>

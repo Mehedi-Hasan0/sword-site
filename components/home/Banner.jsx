@@ -30,19 +30,21 @@ export default function Banner() {
     },
   };
   return (
-    <div className="text-white bg-[url('/assets/images/banner-bg-bottom.webp')] bg-cover pt-20 sm:pt-28 md:pt-24 relative min-h-[800px] lg:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[1000px] flex items-center justify-center overflow-hidden">
+    <div className="text-white bg-[url('/assets/images/banner-bg.webp')] bg-cover pt-20 sm:pt-28 md:pt-24 relative min-h-[800px] lg:min-h-[650px] xl:min-h-[750px] 2xl:min-h-[1000px] flex items-center justify-center overflow-hidden pb-14 lg:pb-0">
       {/* left side dots */}
-      <div className="absolute bottom-0 left-6 sm:left-10 md:left-12 lg:left-16 bg-[url('/assets/icons/bottomLeftDots.svg')] bg-cover z-[3] w-[130px] h-[35px] opacity-30" />
+      <div className="absolute bottom-10 left-6 sm:left-10 md:left-12 lg:left-16 bg-[url('/assets/icons/bottomLeftDots.svg')] bg-cover z-[5] w-[130px] h-[35px] opacity-30 lg:opacity-40" />
       {/* right side dots */}
-      <div className="absolute top-32 right-6 sm:right-10 md:right-12 lg:right-16 bg-[url('/assets/icons/rightTopDots.svg')] bg-cover z-[3] w-[60px] h-[96px] opacity-30" />
-      {/* right side banner */}
-      <div className="bg-[url('/assets/images/okx-banner-bg.webp')] absolute w-1/2 h-full right-0 top-0 z-[1] bg-right-top bg-no-repeat opacity-30" />
+      <div className="absolute top-32 right-6 sm:right-10 md:right-12 lg:right-16 bg-[url('/assets/icons/rightTopDots.svg')] bg-cover z-[3] w-[60px] h-[96px] opacity-30 lg:opacity-40" />
+      {/* left lines */}
+      <div className="absolute bg-[url('/assets/icons/leftLines.svg')] bg-contain bg-no-repeat z-[5] w-1/2 h-full opacity-40 left-0" />
+      {/* right lines */}
+      <div className="absolute bg-[url('/assets/icons/rightLines.svg')] bg-contain bg-no-repeat z-[2] w-1/2 h-full opacity-40 right-0" />
+      {/* circle layer */}
+      <div className="absolute bg-[url('/assets/images/layer.png')] bg-contain bg-no-repeat z-[5] w-[200px] h-[500px] 2xl:w-[365px] 2xl:h-[731px] opacity-90 left-0" />
       {/* full width overlay */}
-      <div className="bg-gradient-to-r from-black/10 to-black/40 absolute w-full h-full z-[2]" />
-      {/* half width overlay for characters */}
-      <div className=" w-1/2 h-2/5 bg-gradient-to-b from-transparent to-black absolute bottom-0 right-0 z-20 lg:block hidden" />
+      <div className="bg-[url('/assets/images/banner-overlay.png')] bg-cover bg-no-repeat absolute w-full h-full bottom-0 left-0 z-[4]" />
       {/* main content */}
-      <section className="flex flex-col-reverse lg:flex-row items-center justify-between main-container relative z-[15]">
+      <section className="flex flex-col-reverse items-center justify-center main-container relative z-[15] gap-7">
         {/* texts and btn */}
         <motion.div
           className="flex justify-center items-center lg:justify-start lg:items-start gap-3 sm:gap-5 flex-1 sm:w-full sm:mt-10 lg:mt-20 lg:max-w-[500px] xl:max-w-[550px] 2xl:max-w-[645px] lg:my-10 xl:my-10 w-[320px] mx-auto lg:mx-0"
@@ -54,31 +56,33 @@ export default function Banner() {
           }}
         >
           <div className="flex flex-col justify-center items-center">
-            <h1 className="uppercase font-bold leading-[0.9] banner-heading">
-              <span className="text-green">Okx</span> chain
+            <h1 className="uppercase font-bold leading-[0.9] text-4xl sm:text-5xl xl:text-5xl 2xl:text-6xl max-w-[556px] text-center font-khand tracking-widest">
+              <span className="text-nowrap">Introduction to</span>{" "}
+              <span className="text-purple text-[60px] sm:text-[85px] xl:text-[90px] 2xl:text-[110px] tracking-wider">
+                Telos
+              </span>{" "}
+              <span className="text-lime text-[60px] sm:text-[85px] xl:text-[90px] 2xl:text-[110px] tracking-wider">
+                EVM
+              </span>
             </h1>
-            <div className="flex flex-col gap-2">
-              <p className="text-base md:text-lg xl:text-2xl 2xl:text-3xl leading-[0.9] font-medium text-center">
-                Character in <span className="text-green">Katana Inu</span> game
-                on <span className="text-green">OKX Chain</span>
-              </p>
-              <p className="text-xs md:text-sm xl:text-base 2xl:text-lg text-center text-[#DCDCDC] max-w-[450px] xl:max-w-[645px]">
-                We have designed the special in-game character to show our
-                tribute to the great Baby Doge community and now the community
-                members can also claim one of their own through our NFT
-                collection. These characters can be used as in-game skins and
-                will have several different variations.
-              </p>
-            </div>
+            <p className="text-xs md:text-sm xl:text-base 2xl:text-lg text-center text-[#DCDCDC] max-w-[700px] xl:min-w-[600px]  2xl:min-w-[760px] px-4 sm:px-0">
+              The Telos EVM offers a production-ready environment for developers
+              looking to harness the power of Web3. With industry-leading speed,
+              low fixed gas fees, and consistent uninterrupted uptime since
+              launch, Telos EVM distinguishes itself as one of the few
+              blockchains that is genuinely usable, accessible, and secure for
+              all.
+            </p>
             {/* btn */}
-            <div className="mt-5 md:mt-6 2xl:mt-12 flex flex-col justify-center items-center">
+            <div className="mt-5 md:mt-6 xl:mt-10 2xl:mt-12 flex flex-col justify-center items-center">
               <BannerButton />
             </div>
           </div>
         </motion.div>
-        {/* right side content */}
+
+        {/* mobile image */}
         <motion.div
-          className="flex items-center gap-10 lg:block w-full lg:w-1/2 h-full relative bottom-5 sm:bottom-0"
+          className="mt-5 block lg:hidden"
           variants={img1Variant}
           initial="initial"
           whileInView="animate"
@@ -87,17 +91,32 @@ export default function Banner() {
           }}
         >
           <Image
-            src={"/assets/images/okx-banner-ch.webp"}
+            src={"/assets/images/mobile-banner-character.webp"}
             alt="hero character 1"
-            width={1035}
-            height={1000}
-            className=" sm:h-auto sm:object-contain hero-ch relative z-10"
+            width={575}
+            height={500}
+            className="sm:w-[400px] md:w-[500px]"
           />
-
-          {/* mobile device overlay */}
-          <div className="absolute w-full h-[10%] bg-gradient-to-b from-transparent to-black z-[11] bottom-0 left-0" />
         </motion.div>
       </section>
+      {/* right side content */}
+      <motion.div
+        className="lg:block hidden absolute top-28 xl:top-16 2xl:top-10 right-7 z-[3]"
+        variants={img1Variant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+        <Image
+          src={"/assets/images/banner-character.webp"}
+          alt="hero character 1"
+          width={575}
+          height={1000}
+          className="object-contain lg:w-[300px] xl:w-[400px] 2xl:w-[575px]"
+        />
+      </motion.div>
     </div>
   );
 }

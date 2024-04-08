@@ -104,7 +104,7 @@ export default function Media() {
           {/* white list button */}
           <div className="mt-7 flex justify-center">
             {/* white list btn */}
-            <WhitelistButton isFullWidth={false} bgColor="#65FF9E" />
+            <WhitelistButton isFullWidth={false} bgColor="bg-[#65FF9E]" />
           </div>
         </motion.div>
       </div>

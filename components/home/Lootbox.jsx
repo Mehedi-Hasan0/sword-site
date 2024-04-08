@@ -191,7 +191,7 @@ export default function Lootbox() {
               />
 
               {/* white list btn */}
-              <WhitelistButton isFullWidth={false} bgColor="#65FF9E" />
+              <WhitelistButton isFullWidth={false} bgColor="bg-[#65FF9E]" />
 
               {/* left card character for mobile */}
               <div className="relative">

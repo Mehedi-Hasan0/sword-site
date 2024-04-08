@@ -132,7 +132,7 @@ export default function LootBoxDetails() {
                 <div className="py-5 xl:py-9 min-w-[270px]">
                   <WhitelistButton
                     isFullWidth={true}
-                    bgColor={"#CC44FF"}
+                    bgColor={"bg-[#CC44FF]"}
                     textColor="#FFFFFF"
                   />
                 </div>

@@ -35,8 +35,8 @@ export default function Home() {
       <main>
         <Banner />
         <WeaponNft />
-        <LootBoxDetails />
         <MintingDetails />
+        <LootBoxDetails />
         <Media />
         <Ecosystem />
         <Wallet />

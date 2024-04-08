@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CustomButtonVariant1 from "../ui/CustomButtonVariant1";
+import FullWidthBorder from "../shared/FullWidthBorder";
 
 export default function Ecosystem() {
   const handleBlobMoving = (e, btnRef) => {
@@ -53,7 +54,7 @@ export default function Ecosystem() {
 
   return (
     <motion.section
-      className="text-white overflow-hidden lg:bg-[url('/assets/images/3rd-sec-banner.webp')] bg-cover bg-center relative"
+      className="text-white overflow-hidden bg-[url('/assets/images/mint-soon-banner.webp')] bg-cover bg-center relative"
       variants={textVariant}
       initial="initial"
       whileInView="animate"
@@ -67,22 +68,22 @@ export default function Ecosystem() {
       {/* bg right text overlay */}
       {/* <div className="bg-[url('/assets/images/babydoge-text-bg.webp')] bg-no-repeat bg-cover w-[50%] h-full z-20 absolute top-0 right-0 hidden lg:block" /> */}
 
-      <div className="relative z-10 flex flex-col-reverse lg:flex-row gap-10">
-        <div className="pl-6 pr-6 sm:pl-10 sm:pr-10 md:pl-12 md:pr-10 lg:pr-0 lg:pl-12 relative py-8 md:py-10 w-full lg:w-[50%] lg:max-w-[458px] 2xl:max-w-[600px] mx-auto flex flex-col justify-center items-center ">
+      <div className="relative flex flex-col gap-10">
+        <div className="pl-6 pr-6 sm:pl-10 sm:pr-10 md:pl-12 md:pr-10 lg:pr-0 lg:pl-12 relative sm:py-8 md:py-10 mx-auto flex flex-col justify-center items-center top-7 sm:top-10">
           {/* // left content */}
           <div className="mx-auto flex flex-col justify-center items-center gap-5 sm:gap-7 lg:gap-9 xl:gap-10 relative z-10">
             <div className="w-full flex flex-col gap-5 sm:gap-7 lg:gap-9 xl:gap-10">
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold text-center">
                 Katana Inu is a{" "}
-                <span className="text-green">MMO NFT PC Game</span>
+                <span className="text-lime">MMO NFT PC Game</span>
               </h3>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl text-[#D0D4EA] text-center">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl text-[#D0D4EA] text-center max-w-[870px]">
                 Check for Katana Inu Ecosystem for Renting, Staking, our
                 Marketplace or for purchasing our $Kata Token:
               </p>
             </div>
 
-            <div className="w-[260px] sm:w-[400px]">
+            <div className="w-[260px] sm:w-[340px]">
               {mintSoonBtn.map((btn, i) => (
                 <CustomButtonVariant1
                   key={btn.bgColor}
@@ -99,7 +100,7 @@ export default function Ecosystem() {
                 />
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:gap-7">
+            <div className="flex flex-col sm:flex-row gap-3 lg:gap-7">
               {/* katana logo */}
               {logoData.map((data, i) => (
                 <div
@@ -107,7 +108,7 @@ export default function Ecosystem() {
                   className="flex flex-col items-center justify-center gap-4"
                 >
                   {/* /////////////////// BTN //////////////////// */}
-                  <div className="relative p-1 min-h-[42px] min-w-[175px] lg:min-w-[300px] flex justify-center items-center">
+                  <div className="relative p-1 min-h-[42px] min-w-[175px] lg:min-w-[210px] flex justify-center items-center">
                     {/* left lines/border */}
                     <div className=" absolute left-0 top-0 h-full min-h-[42px] w-full flex flex-col">
                       <div className="w-[1px] h-full bg-[#f1f1f1]" />
@@ -178,7 +179,7 @@ export default function Ecosystem() {
                             "--gradClr": "#00FF00",
                             "--hoverClr": "#000000",
                           }}
-                          className={`w-full h-5 uppercase font-extrabold rounded-none bg-[#1a1a1a] text-sm text-[#ffffff]`}
+                          className={`w-full h-5 font-extrabold rounded-none bg-[#1a1a1a] text-sm text-[#ffffff]`}
                         >
                           {data.textLabel}
                         </Button>
@@ -190,21 +191,22 @@ export default function Ecosystem() {
             </div>
             {/*  */}
           </div>
-          {/* overlay frame for small device */}
-          <div className="w-full h-full absolute top-0 left-0 z-[2] bg-[url('/assets/images/lootCard-frame.png')] block lg:hidden" />
         </div>
-
-        {/* right content */}
-        <div className="w-full lg:w-[50%] relative z-10">
+        {/* poster */}
+        <div className="w-full h-full">
           <Image
-            src={"/assets/images/ecosystem-ch.webp"}
+            src={"/assets/images/mint-soon-poster.webp"}
             alt=""
-            width={1041}
-            height={944}
-            className="relative z-[2]"
+            width={1924}
+            height={615}
+            className=""
           />
-          <div className="w-[50%] h-full absolute top-0 right-0 z-[1] bg-[url('/assets/images/3rd-sec-top-right-layer.webp')] object-contain" />
         </div>
+      </div>
+
+      {/* border-top */}
+      <div className="absolute top-0 left-0 w-full h-[3px]">
+        <FullWidthBorder reversed={true} />
       </div>
     </motion.section>
   );
@@ -212,7 +214,7 @@ export default function Ecosystem() {
 const mintSoonBtn = [
   {
     textLabel: "Mint soon",
-    bgColor: "#00FF00",
+    bgColor: "#CC44FF",
     textSize: "text-sm lg:text-base 2xl:text-xl ",
     innerBtnPadding: "px-10 h-8",
     bgVariantType: "#232323",
@@ -226,10 +228,10 @@ const mintSoonBtn = [
 const logoData = [
   {
     icon: "/assets/images/katanaLogo.webp",
-    textLabel: "Kataninu",
+    textLabel: "KATANAINU.IO",
   },
   {
     icon: "/assets/images/baby-doge-logo.png",
-    textLabel: "babydoge",
+    textLabel: "Buy $KATA Token",
   },
 ];

@@ -76,7 +76,7 @@ export default function Navbars() {
                     width={40}
                     height={40}
                     priority={true}
-                    className=" w-[40px] sm:w-[40px]"
+                    className=" w-[30px] sm:w-[40px]"
                   />
                 </Link>
               </div>
@@ -163,7 +163,7 @@ const MobileNavElement = () => {
     },
     {
       textLabel: "kainu",
-      bgColor: "#00FF00",
+      bgColor: "#65FF9E",
       bgVariantType: "#232323",
       hoverTextColor: "#fff",
       elementColor: "#ffffff",
@@ -219,7 +219,7 @@ const MobileNavElement = () => {
               exit="exit"
               initial="initial"
             >
-              <Link href={link.link}>{link.label}</Link>
+              <Link href={"#"}>{link.label}</Link>
             </motion.div>
           </div>
         );

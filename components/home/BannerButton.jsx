@@ -28,7 +28,7 @@ const BannerButton = () => {
   }, [buttonVariantRef && typeof window !== "undefined" && window.innerWidth]);
   return (
     <>
-      <WhitelistButton isFullWidth={false} />
+      <WhitelistButton isFullWidth={false} bgColor="#65FF9E" />
 
       <div className="flex flex-row items-center mt-8 md:mt-10 lg:mt-16 xl:mt-20 2xl:mt-32 gap-6">
         {/* katana logo */}

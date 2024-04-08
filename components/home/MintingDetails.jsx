@@ -287,7 +287,7 @@ export default function MintingDetails() {
                     {/* white list button */}
                     <div className="mt-3 2xl:mt-5">
                       {/* white list btn */}
-                      <WhitelistButton isFullWidth={true} />
+                      <WhitelistButton isFullWidth={true} bgColor="#65FF9E" />
                     </div>
 
                     <div className="flex items-center justify-between gap-5 md:gap-8 px-5 2xl:pt-5">

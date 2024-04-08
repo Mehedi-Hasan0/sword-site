@@ -8,7 +8,7 @@ export default function FullWidthBorder({ reversed = false }) {
           <div className="w-[60%] h-[3px] bg-purple" />
         </div>
       ) : (
-        <div className="flex items-center">
+        <div className="flex items-center w-full h-[3px]">
           <div className="w-[60%] h-[3px] bg-purple" />
           <div className="w-[30%] h-[3px] bg-transparent" />
           <div className="w-[10%] h-[3px] bg-[#2C98CF]" />

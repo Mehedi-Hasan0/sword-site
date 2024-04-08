@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import WhitelistButton from "../shared/WhitelistButton";
+import FullWidthBorder from "../shared/FullWidthBorder";
 
 export default function LootBoxDetails() {
   const textVariant = {
@@ -142,7 +143,7 @@ export default function LootBoxDetails() {
       </div>
 
       {/* border-top */}
-      <div className="w-[10%] h-[3px] bg-green absolute top-0 left-0 z-10" />
+      <FullWidthBorder reversed={true} />
     </section>
   );
 }

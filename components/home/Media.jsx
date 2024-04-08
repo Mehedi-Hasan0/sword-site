@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 import { useEffect, useRef, useState } from "react";
 import WhitelistButton from "../shared/WhitelistButton";
+import FullWidthBorder from "../shared/FullWidthBorder";
 
 export default function Media() {
   const textVariant = {
@@ -22,7 +23,21 @@ export default function Media() {
     },
   };
   return (
-    <section className="text-white overflow-hidden bg-[url('/assets/images/banner-bg-3.webp')] bg-cover bg-center sm:pb-8 relative sm:mt-8">
+    <section className="text-white overflow-hidden bg-[url('/assets/images/sword-banner.webp')] bg-cover bg-no-repeat sm:pb-8 relative sm:mt-8">
+      {/* glow */}
+      <div className="absolute top-[30%] left-0 z-10">
+        <Image
+          src={"/assets/icons/layer-3.svg"}
+          alt=""
+          width={191}
+          height={197}
+        />
+      </div>
+      {/* left side lines */}
+      <div className="bg-[url('/assets/icons/leftLines.svg')] bg-cover absolute top-0 left-0 w-1/2 h-full z-[2] opacity-50" />
+      {/* right side lines */}
+      <div className="bg-[url('/assets/icons/rightLines.svg')] bg-cover absolute top-0 right-0 w-1/2 h-full z-[2] opacity-30" />
+      {/* main content */}
       <div className="main-container">
         <motion.div
           className="py-10 flex flex-col justify-center items-center"
@@ -34,7 +49,7 @@ export default function Media() {
           // }}
         >
           <Image
-            src={"/assets/icons/text-top-green.svg"}
+            src={"/assets/icons/text-top-purple.svg"}
             alt=""
             width={310}
             height={14}
@@ -45,7 +60,7 @@ export default function Media() {
         </motion.div>
 
         <motion.div
-          className="bg-[url('/assets/icons/frame.svg')] bg-contain bg-no-repeat w-full sm:min-h-[600px] sm:mt-10 md:mt-12 lg:mt-16 p-4 sm:px-8 sm:py-10 lg:px-20 pb-10 relative"
+          className="bg-[url('/assets/icons/frame.svg')] bg-contain bg-no-repeat w-full sm:min-h-[600px] sm:mt-4 md:mt-6 lg:mt-8 p-4 sm:px-8 sm:py-10 lg:px-20 pb-10 relative 2xl:w-[70%] mx-auto z-20"
           variants={textVariant}
           initial="initial"
           whileInView="animate"
@@ -95,8 +110,7 @@ export default function Media() {
       </div>
 
       <div className="absolute top-0 left-0 flex flex-row justify-between w-full h-[3px] z-20">
-        <div className="w-[10%] bg-yellow2 h-[3px]" />
-        <div className="w-[60%] bg-white h-[3px]" />
+        <FullWidthBorder />
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { weaponNftData } from "@/data";
+import FullWidthBorder from "../shared/FullWidthBorder";
 
 export default function WeaponNft() {
   const [swiperLoaded, setSwiperLoaded] = useState(false);
@@ -51,26 +52,37 @@ export default function WeaponNft() {
   }
 
   return (
-    <section className="text-white overflow-hidden sm:pt-12 lg:pt-0 relative">
+    <section className="text-white overflow-hidden sm:pt-12 lg:pt-0 relative bg-[url('/assets/images/weapon/sword-banner.webp')] bg-cover bg-no-repeat">
       {/* left side lines */}
-      <div className="bg-[url('/assets/icons/leftLines.svg')] bg-cover absolute top-0 left-0 min-w-[778px] min-h-[900px] lg:min-h-[600px] xl:min-h-[700px] 2xl:min-h-[1000px] z-[2] opacity-10" />
+      <div className="bg-[url('/assets/icons/leftLines.svg')] bg-cover absolute top-0 left-0 w-1/2 h-full z-[2] opacity-50" />
       {/* right side lines */}
-      <div className="bg-[url('/assets/icons/rightLines.svg')] bg-cover absolute top-0 right-0 min-w-[778px] min-h-[900px] lg:min-h-[600px] xl:min-h-[700px] 2xl:min-h-[1000px] z-[2] opacity-10" />
+      <div className="bg-[url('/assets/icons/rightLines.svg')] bg-cover absolute top-0 right-0 w-1/2 h-full z-[2] opacity-30" />
       {/* left side dots */}
       <div className="absolute bottom-8 sm:bottom-0 left-6 sm:left-10 md:left-12 lg:left-16 bg-[url('/assets/icons/bottomLeftDots.svg')] bg-cover z-[4] w-[130px] h-[35px] opacity-30" />
       {/* right side dots */}
       <div className="absolute top-32 right-6 sm:right-10 md:right-12 lg:right-16 bg-[url('/assets/icons/rightTopDots.svg')] bg-cover z-[4] w-[60px] h-[96px] opacity-30" />
 
-      <div className="main-container relative z-10">
+      {/* right side glow */}
+      <div className="absolute top-[30%] right-0">
+        <Image
+          src={"/assets/images/weapon/rigthGlow.png"}
+          alt=""
+          width={203}
+          height={203}
+        />
+      </div>
+
+      {/* main container */}
+      <div className="main-container relative z-10  sm:py-10">
         <div className="py-8 flex flex-col justify-center items-center">
           <Image
-            src={"/assets/icons/text-top-green.svg"}
+            src={"/assets/icons/text-top-purple.svg"}
             alt=""
             width={310}
             height={14}
           />
-          <h5 className="uppercase text-base sm:text-lg md:text-xl font-bold tracking-[5px]">
-            Sword nft
+          <h5 className="uppercase text-base sm:text-lg md:text-xl font-bold tracking-[5px] text-lime">
+            Swords nft
           </h5>
         </div>
 
@@ -128,13 +140,13 @@ export default function WeaponNft() {
                   <Image
                     src={data.nft}
                     alt=""
-                    width={490}
-                    height={520}
+                    width={i !== 2 ? 376 : 558}
+                    height={i !== 2 ? 574 : 781}
                     className={`${
                       activeSlide === i
                         ? " opacity-100 lg:opacity-100"
                         : "opacity-100 lg:opacity-40"
-                    } pt-10  min-h-[500px] md:max-w-[300px] 2xl:max-h-[800px] relative z-10 bottom-10 md:bottom-0`}
+                    } sm:pt-10 h-[400px] sm:h-auto sm:min-h-[500px] md:max-w-[300px] 2xl:max-h-[800px] relative z-10 bottom-10 md:bottom-0`}
                   />
                 </div>
               </SwiperSlide>
@@ -144,7 +156,7 @@ export default function WeaponNft() {
       </div>
 
       {/* border top */}
-      <div className="absolute w-[10%] h-[3px] top-0 left-0 bg-green" />
+      <FullWidthBorder reversed={true} />
     </section>
   );
 }

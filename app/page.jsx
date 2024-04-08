@@ -34,11 +34,8 @@ export default function Home() {
       <Navbars />
       <main>
         <Banner />
-        <Lootbox />
-        <Characters />
-        <LootBoxDetails />
-        <BabydogeCards />
         <WeaponNft />
+        <LootBoxDetails />
         <MintingDetails />
         <Media />
         <Ecosystem />

@@ -62,11 +62,10 @@ export default function Ecosystem() {
       //   once: true,
       // }}
     >
-      {/* left frame overlay */}
-      <div className="bg-[url('/assets/images/lootCard-frame.png')] w-[50%] h-full absolute z-[2] left-0 top-0 bg-cover bg-no-repeat hidden lg:block" />
-
-      {/* bg right text overlay */}
-      {/* <div className="bg-[url('/assets/images/babydoge-text-bg.webp')] bg-no-repeat bg-cover w-[50%] h-full z-20 absolute top-0 right-0 hidden lg:block" /> */}
+      {/* left lines */}
+      <div className="absolute bg-[url('/assets/icons/leftLines.svg')] bg-contain bg-no-repeat z-[5] w-1/2 h-full opacity-40 left-0" />
+      {/* right lines */}
+      <div className="absolute bg-[url('/assets/icons/rightLines.svg')] bg-contain bg-no-repeat z-[2] w-1/2 h-full opacity-40 right-0" />
 
       <div className="relative flex flex-col gap-10">
         <div className="pl-6 pr-6 sm:pl-10 sm:pr-10 md:pl-12 md:pr-10 lg:pr-0 lg:pl-12 relative sm:py-8 md:py-10 mx-auto flex flex-col justify-center items-center top-7 sm:top-10">

@@ -23,7 +23,7 @@ export default function Media() {
     },
   };
   return (
-    <section className="text-white overflow-hidden bg-[url('/assets/images/sword-banner.webp')] bg-cover bg-no-repeat sm:pb-8 relative sm:mt-8">
+    <section className="text-white overflow-hidden bg-[url('/assets/images/weapon/sword-banner.webp')] bg-cover bg-no-repeat sm:pb-8 relative sm:mt-8">
       {/* glow */}
       <div className="absolute top-[30%] left-0 z-10">
         <Image

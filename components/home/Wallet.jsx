@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import FullWidthBorder from "../shared/FullWidthBorder";
 
 export default function Wallet() {
   const textVariant = {
@@ -33,10 +34,24 @@ export default function Wallet() {
   };
 
   return (
-    <section className="text-white overflow-hidden section-padding lg:bg-[url('/assets/images/banner-bg-8.png')] bg-cover bg-center min-h-[700px] 2xl:min-h-[800px] pb-10 lg:mt-16 lg:pb-20">
-      <div className="main-container">
+    <section className="text-white overflow-hidden bg-[url('/assets/images/weapon/sword-banner.webp')] bg-cover bg-center sm:pb-10 lg:mt-16 lg:pb-20 relative pt-8 sm:pt-10 lg:pt-14">
+      {/* glow */}
+      <div className="absolute top-[30%] left-0 z-[5]">
+        <Image
+          src={"/assets/icons/layer-3.svg"}
+          alt=""
+          width={191}
+          height={197}
+        />
+      </div>
+      {/* left side lines */}
+      <div className="bg-[url('/assets/icons/leftLines.svg')] bg-cover absolute top-0 left-0 w-1/2 h-full z-[2] opacity-50" />
+      {/* right side lines */}
+      <div className="bg-[url('/assets/icons/rightLines.svg')] bg-cover absolute top-0 right-0 w-1/2 h-full z-[2] opacity-30" />
+      {/* main content */}
+      <div className="main-container relative z-10">
         <motion.div
-          className="flex flex-col justify-center items-center gap-4 mb-8 sm:mb-10 md:mb-14 lg:mb-16 xl:mb-20"
+          className="flex flex-col justify-center items-center gap-4 mb-8 sm:mb-10 md:mb-14 lg:mb-16"
           variants={textVariant}
           initial="initial"
           whileInView="animate"
@@ -44,10 +59,10 @@ export default function Wallet() {
           //   once: true,
           // }}
         >
-          <p className="tex-xs sm:text-base md:text-lg lg:text-[22px] font-light text-center">
+          <p className="tex-xs sm:text-base md:text-lg lg:text-[22px] font-light text-center text-lime">
             Trade with world’s most trusted and fastest wallets
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-green font-medium">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-purple font-medium">
             Wallets We Support
           </h2>
         </motion.div>
@@ -73,7 +88,7 @@ export default function Wallet() {
         {/* how it works */}
         <div className=" flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 mt-12 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-32">
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-green font-medium"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-purple font-medium"
             variants={textVariant}
             initial="initial"
             whileInView="animate"
@@ -110,6 +125,10 @@ export default function Wallet() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="absolute top-0 left-0 w-full h-[3px]">
+        <FullWidthBorder />
       </div>
     </section>
   );

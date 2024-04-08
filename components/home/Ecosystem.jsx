@@ -175,7 +175,7 @@ export default function Ecosystem() {
                         <Button
                           variant="customAnimated"
                           style={{
-                            "--gradClr": "#00FF00",
+                            "--gradClr": "#65FF9E",
                             "--hoverClr": "#000000",
                           }}
                           className={`w-full h-5 font-extrabold rounded-none bg-[#1a1a1a] text-sm text-[#ffffff]`}

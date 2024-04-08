@@ -187,7 +187,7 @@ export default function WhitelistButton({
 
             {/* form footer */}
             <div className="flex flex-col justify-center items-center gap-2 mt-5">
-              <h4 className="font-jost text-sm md:text-base">
+              <h4 className="font-jost text-sm md:text-base text-center">
                 Just a limited amount of people will be picked and added to the
                 whitelist.
               </h4>
@@ -200,7 +200,7 @@ export default function WhitelistButton({
             <DialogFooter className="mx-auto">
               <Button
                 type="submit"
-                className="uppercase bg-green text-black font-bold hover:text-white transition-all duration-300 ease-in"
+                className="uppercase bg-lime text-black font-bold hover:text-white transition-all duration-300 ease-in"
               >
                 Submit
               </Button>

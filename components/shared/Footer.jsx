@@ -48,7 +48,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={li.link}
-                  className="text-sm sm:text-base md:text-lg lg:text-xl text-[#747474] hover:text-green whitespace-nowrap transition duration-300 ease-in"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-[#747474] hover:text-purple whitespace-nowrap transition duration-300 ease-in"
                 >
                   {li.label}
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={li.link}
-                  className="text-sm sm:text-base md:text-lg lg:text-xl text-[#747474] hover:text-green whitespace-nowrap transition duration-300 ease-in"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl text-[#747474] hover:text-purple whitespace-nowrap transition duration-300 ease-in"
                 >
                   {li.label}
                 </Link>

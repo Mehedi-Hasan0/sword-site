@@ -280,7 +280,7 @@ export default function MintingDetails() {
                   </div>
                   {/* public sale */}
                   <div className="flex flex-col gap-5 md:gap-6 lg:gap-6 xl:gap-5 2xl:gap-6 lg:px-5 mt-4 md:mt-0">
-                    <button className="px-3 py-2 md:px-4 lg:px-5 lg:py-3 2xl:px-6 2xl:py-4 bg-[#48175A] hover:bg-[#123912] transition duration-200 ease-in uppercase rounded-md text-white font-medium w-full">
+                    <button className="px-3 py-2 md:px-4 lg:px-5 lg:py-3 2xl:px-6 2xl:py-4 bg-[#48175A] hover:bg-[#532165] transition duration-200 ease-in uppercase rounded-md text-white font-medium w-full">
                       public sale
                     </button>
 

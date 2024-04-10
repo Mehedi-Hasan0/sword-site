@@ -133,7 +133,7 @@ export default function LootBoxDetails() {
                   <WhitelistButton
                     isFullWidth={true}
                     bgColor={"bg-[#CC44FF]"}
-                    textColor="#FFFFFF"
+                    textColor="text-[#FFFFFF]"
                   />
                 </div>
               </div>

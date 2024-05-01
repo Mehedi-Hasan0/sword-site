@@ -47,7 +47,7 @@ export default function Banner() {
       <section className="flex flex-col-reverse items-center justify-center main-container relative z-[15] gap-7">
         {/* texts and btn */}
         <motion.div
-          className="flex justify-center items-center lg:justify-start lg:items-start gap-3 sm:gap-5 flex-1 sm:w-full sm:mt-10 lg:mt-20 lg:max-w-[500px] xl:max-w-[550px] 2xl:max-w-[645px] lg:my-10 xl:my-10 w-[320px] mx-auto lg:mx-0"
+          className="flex justify-center items-center gap-3 sm:gap-5 flex-1 sm:w-full sm:mt-10 lg:mt-20  lg:my-10 xl:my-10 w-[320px] mx-auto lg:mx-0"
           variants={textVariant}
           initial="initial"
           whileInView="animate"

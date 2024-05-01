@@ -65,7 +65,7 @@ export const charactersData = [
 export const weaponNftData = [
   {
     label: "OKY Knife Details",
-    nft: "/assets/images/weapon/sword-1.svg",
+    nft: "/assets/images/weapon/sword-1.png",
     desc: "And get a random skin or sword. Mint more to get better chance. Ranking points for better earning and access to Play2Earn",
     title: "OKY CHAIN",
     slug1: "rarity",
@@ -75,7 +75,7 @@ export const weaponNftData = [
   },
   {
     label: "OKY Knife Details",
-    nft: "/assets/images/weapon/sword-2.svg",
+    nft: "/assets/images/weapon/sword-2.png",
     desc: "And get a random skin or sword. Mint more to get better chance. Ranking points for better earning and access to Play2Earn",
     title: "OKY CHAIN",
     slug1: "rarity",
@@ -85,7 +85,7 @@ export const weaponNftData = [
   },
   {
     label: "OKY Knife Details",
-    nft: "/assets/images/weapon/sword-3.svg",
+    nft: "/assets/images/weapon/sword-3.png",
     desc: "And get a random skin or sword. Mint more to get better chance. Ranking points for better earning and access to Play2Earn",
     title: "OKY CHAIN",
     slug1: "rarity",
@@ -95,7 +95,7 @@ export const weaponNftData = [
   },
   {
     label: "OKY Knife Details",
-    nft: "/assets/images/weapon/sword-4.svg",
+    nft: "/assets/images/weapon/sword-4.png",
     desc: "And get a random skin or sword. Mint more to get better chance. Ranking points for better earning and access to Play2Earn",
     title: "OKY CHAIN",
     slug1: "rarity",
@@ -105,7 +105,7 @@ export const weaponNftData = [
   },
   {
     label: "OKY Knife Details",
-    nft: "/assets/images/weapon/sword-5.svg",
+    nft: "/assets/images/weapon/sword-5.png",
     desc: "And get a random skin or sword. Mint more to get better chance. Ranking points for better earning and access to Play2Earn",
     title: "OKY CHAIN",
     slug1: "rarity",

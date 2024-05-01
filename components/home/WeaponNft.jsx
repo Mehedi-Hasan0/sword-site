@@ -16,7 +16,7 @@ export default function WeaponNft() {
   const [swiperLoaded, setSwiperLoaded] = useState(false);
   const [activeSlide, setActiveSlide] = useState(2); // State to keep track of active slide index
   const [slides, setSlides] = useState(
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 3
+    typeof window !== "undefined" && window.innerWidth < 1024 ? 1 : 3
   );
 
   const handleSlideChange = (swiper) => {
@@ -36,7 +36,7 @@ export default function WeaponNft() {
 
     function resizeCheck() {
       setSlides(
-        typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 3
+        typeof window !== "undefined" && window.innerWidth < 1024 ? 1 : 3
       );
     }
 
@@ -87,7 +87,7 @@ export default function WeaponNft() {
         </div>
 
         {/* slider */}
-        <div className=" text-black xl:px-28 2xl:px-72">
+        <div className=" text-black xl:px-10 2xl:px-56">
           <Swiper
             slidesPerView={slides}
             spaceBetween={30}
@@ -111,8 +111,8 @@ export default function WeaponNft() {
                 key={i}
                 className={`${
                   activeSlide === i
-                    ? " max-h-[800px] 2xl:max-w-[1000px]"
-                    : " max-h-[800px] 2xl:max-w-[1000px]"
+                    ? " lg:max-h-[800px] 2xl:max-w-[1000px]"
+                    : " lg:max-h-[800px] 2xl:max-w-[1000px]"
                 } relative`}
               >
                 <div className="flex justify-center items-center">
@@ -137,17 +137,91 @@ export default function WeaponNft() {
                   />
 
                   {/* sword */}
-                  <Image
-                    src={data.nft}
-                    alt=""
-                    width={i !== 2 ? 376 : 558}
-                    height={i !== 2 ? 574 : 781}
-                    className={`${
-                      activeSlide === i
-                        ? " opacity-100 lg:opacity-100"
-                        : "opacity-100 lg:opacity-40"
-                    } sm:pt-10 h-[400px] sm:h-auto sm:min-h-[500px] md:max-w-[300px] 2xl:max-h-[800px] relative z-10 bottom-10 md:bottom-0`}
-                  />
+                  <div className="flex flex-col justify-center items-center">
+                    <Image
+                      src={data.nft}
+                      alt=""
+                      width={490}
+                      height={520}
+                      className={`${
+                        activeSlide === i
+                          ? " opacity-100 lg:opacity-100"
+                          : "opacity-100 lg:opacity-40"
+                      } pt-10  min-h-[500px] md:max-w-[300px] 2xl:max-h-[800px] relative z-10 bottom-10 md:bottom-0`}
+                    />
+                    <div
+                      className={`${
+                        activeSlide === i
+                          ? "from-[#6103d34c]"
+                          : "from-[#8f8f8f58]"
+                      } bg-gradient-to-b to-transparent p-5 rounded-sm flex flex-col gap-1 text-white max-w-[350px] relative z-40 mx-7 -mt-10 sm:-mt-16 md:-mt-0 md:mx-0`}
+                    >
+                      <h4
+                        className={`text-base lg:text-lg 2xl:text-xl font-medium ${
+                          activeSlide === i ? "text-[#65FF9E]" : "text-gray-300"
+                        }`}
+                      >
+                        {data.label}
+                      </h4>
+                      <p
+                        className={`
+                      ${
+                        activeSlide === i ? "text-gray-300" : "text-gray-400"
+                      } text-[10px] lg:text-xs 2xl:text-sm`}
+                      >
+                        {data.desc}
+                      </p>
+                      <div className="mt-2">
+                        <h5 className="text-sm lg:text-base 2xl:text-lg ">
+                          {data.title}
+                        </h5>
+                        <div className="flex items-center justify-between gap-5">
+                          <div>
+                            <p className="uppercase text-[8px] lg:text-[10px] 2xl:text-xs text-gray-500">
+                              {data.slug1}
+                            </p>
+                            <p className="uppercase text-[10px] lg:text-xs 2xl:text-sm text-gray-300">
+                              {data.sku1}
+                            </p>
+                          </div>
+                          <div className="flex flex-col items-end">
+                            <p className="uppercase text-[8px] lg:text-[10px] 2xl:text-xs text-gray-500">
+                              {data.slug2}
+                            </p>
+                            <p className="uppercase text-[10px] lg:text-xs 2xl:text-sm text-gray-300">
+                              {data.sku2}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 flex items-center gap-4">
+                        <p className="uppercase text-[8px] lg:text-[10px] 2xl:text-xs text-gray-500">
+                          Color
+                        </p>
+                        <div className="flex items-center gap-1">
+                          <div className="w-3 h-3 bg-red-400 rounded-full border border-opacity-50" />
+                          <div className="w-3 h-3 bg-lime-400 rounded-full border border-opacity-50 opacity-50" />
+                          <div className="w-3 h-3 bg-blue-400 rounded-full border border-opacity-50 opacity-50" />
+                          <div className="w-3 h-3 bg-orange-400 rounded-full border border-opacity-50 opacity-50" />
+                          <div className="w-3 h-3 bg-green-400 rounded-full border border-opacity-50 opacity-50" />
+                        </div>
+                      </div>
+
+                      {/* logos */}
+                      <div className="flex justify-center items-center mt-6 gap-6">
+                        <Image
+                          src={"/assets/icons/okx.svg"}
+                          alt="okx"
+                          width={30}
+                          height={30}
+                        />
+                        <p className="text-[8px] lg:text-[10px] 2xl:text-xs font-medium">
+                          BNB Chain
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
